@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="StarkUnfassbar">
+    <meta name="description" content="Сайт для депортамента. ВКР темы">
+    
+    <title>ВКР темы</title>
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'vkr/css/vkr_topics_test.css' %}">
+</head>
+<body>
+
+    {% include 'main/header.html' %}
+
+    <main>
+        <table>
+            <tr>
+                <th>№ <br> п/п</th>
+                <th>ФИО студента</th>
+                <th>ФИО руководителя</th>
+                <th>Номер  телефона студента</th>
+                <th>Тема ВКР</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>ФИО</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr >
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr >
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </main>
+
+    {% include 'main/footer.html' %}
+
+    <script src="{% static 'main/js/header.js' %}"></script>
+</body>
+</html>   

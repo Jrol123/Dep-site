@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="StarkUnfassbar">
+    <meta name="description" content="Сайт для депортамента. ВКР архив">
+
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    
+    <title>ВКР методические материалы</title>
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'vkr/css/teaching_materials.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/popup_tooltip.css' %}">
+    <link rel="stylesheet" href="{% static 'vkr/css/popup_add_file.css' %}">
+    <link rel="stylesheet" href="{% static 'vkr/css/popup_remove_file.css' %}">
+    <link rel="stylesheet" href="{% static 'vkr/css/popup_add_file_select.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+
+    {% include 'main/header.html' %}
+
+    <main>
+        <div class="buttons_menu">
+            <div class="buttons_menu__left">
+                <a href="" class="link_add" id="button-add-file">
+                    <img src="{% static 'vkr/img/icons/icon_plus.png' %}" alt="">
+                    Добавить файл
+                </a>
+            </div>
+            <div class="buttons_menu__right">
+                <a href="" class="link_remove" id="button-remove-file">
+                    <img src="{% static 'vkr/img/icons/icon_plus.png' %}" alt="">
+                    Удалить файл
+                </a>
+
+                <div class="select" id="select">
+                    <div class="select__text">
+                        <p class="text_placeholder">Выбрать группы...</p>
+                    </div>
+                    <div class="select__separator"></div>
+                    <span>></span>
+
+                    <div class="select__hidden_menu none">                       
+                        {% for group_name in group_names %}
+                            <a href="">{{ group_name }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table">
+            <div class="table__block">
+
+            </div>
+
+            <div class="table__block">
+
+            </div>
+
+            <div class="table__block">
+
+            </div>
+
+            <div class="table__block">
+
+            </div>
+        </div>
+    </main>
+
+    {% include 'main/footer.html' %}
+
+    {% include 'vkr/popup_add_file.html' %}
+
+    {% include 'vkr/popup_remove_file.html' %}
+
+    <script src="{% static 'main/js/header.js' %}"></script>
+    <script src="{% static 'main/js/popup_tooltip.js' %}"></script>
+    <script src="{% static 'vkr/js/popup_add_file.js' %}"></script>
+    <script src="{% static 'vkr/js/add_file_teaching_materials.js' %}"></script>
+    <script src="{% static 'vkr/js/teaching_materials_select.js' %}"></script>
+    <script src="{% static 'vkr/js/popup_add_file_select.js' %}"></script>
+    <script src="{% static 'vkr/js/popup_remove_file.js' %}"></script>
+    <script src="{% static 'vkr/js/remove_file_teaching_materials.js' %}"></script>
+</body>
+</html>   

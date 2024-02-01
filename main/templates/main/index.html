@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="StarkUnfassbar">
+    <meta name="description" content="Сайт для депортамента">
+
+    <title>Сайт для депортамента</title>
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+</head>
+<body>
+    {% include 'main/header.html' %}
+
+    <main>
+        <div class="slider">
+            <img src="{% static 'main/img/main/slider_img.png' %}" alt="">
+
+            <div class="news">
+                <h1 class="news__title">Новости</h1>
+
+                {% for single_news in news %}
+                    <div class="news__new">
+                        <svg width="234" height="2" viewBox="0 0 234 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1C83.7843 1 153.517 1 177.91 1H234" stroke="#272727"/>
+                        </svg>
+                        <p class="date">{{ single_news.1 }}</p>
+                        <p class="title">{{ single_news.0 }}</p>
+                    </div>
+                {% endfor %}
+
+                <!-- <div class="news__new">
+                    <svg width="234" height="2" viewBox="0 0 234 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 1C83.7843 1 153.517 1 177.91 1H234" stroke="#272727"/>
+                    </svg>
+                    <p class="date">02.01.2024</p>
+                    <p class="title">Заголовок новости</p>
+                </div>
+
+                <div class="news__new">
+                    <svg width="234" height="2" viewBox="0 0 234 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 1C83.7843 1 153.517 1 177.91 1H234" stroke="#272727"/>
+                    </svg>
+                    <p class="date">02.01.2024</p>
+                    <p class="title">Заголовок новости</p>
+                </div>
+
+                <div class="news__new">
+                    <svg width="234" height="2" viewBox="0 0 234 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 1C83.7843 1 153.517 1 177.91 1H234" stroke="#272727"/>
+                    </svg>
+                    <p class="date">02.01.2024</p>
+                    <p class="title">Заголовок новости</p>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="patterns">
+            <img src="{% static 'main/img/patterns/pattern_2.png' %}" alt="">
+            <img src="{% static 'main/img/patterns/pattern_1.png' %}" alt="">
+        </div>
+    </main>
+
+    {% include 'main/footer.html' %}
+
+    <script src="{% static 'main/js/header.js' %}"></script>
+</body>
+</html>

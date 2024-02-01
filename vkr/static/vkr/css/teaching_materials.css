@@ -1,0 +1,227 @@
+body{
+    margin: 0;
+}
+
+main{
+    padding: 0 66px;
+}
+
+
+main .buttons_menu{
+    display: flex;
+    align-items: center;
+    margin: 22px 0;
+}
+
+
+main .buttons_menu .buttons_menu__left{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+main .buttons_menu .buttons_menu__left .link_add{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: fit-content;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; 
+    text-decoration: none;
+}
+
+main .buttons_menu .buttons_menu__left .link_add img{
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+
+main .buttons_menu .buttons_menu__right{
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+    width: 100%;
+}
+
+main .buttons_menu .buttons_menu__right .link_remove{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: fit-content;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; 
+    text-decoration: none;
+}
+
+main .buttons_menu .buttons_menu__right .link_remove img{
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transform: rotate(45deg);
+}
+
+main .buttons_menu .buttons_menu__right .select{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 265px; 
+    height: 40px;
+    border: 1px solid #000; 
+    border-radius: 9px;
+    padding: 0 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+main .buttons_menu .buttons_menu__right .select._active{
+    border: 1px solid #388CDA;
+}
+
+main .buttons_menu .buttons_menu__right .select .select__text{
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+main .buttons_menu .buttons_menu__right .select span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px; 
+    position: absolute;
+    right: 0;
+    color: #000;
+    text-align: center;
+    font-family: "OpenSans", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    transform: rotate(90deg); 
+}
+
+main .buttons_menu .buttons_menu__right .select._active span{
+    transform: rotate(-90deg); 
+}
+
+main .buttons_menu .buttons_menu__right .select .select__separator{
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 1px;
+    height: 100%;
+    background: #D9D9D9;
+}
+
+main .buttons_menu .buttons_menu__right .select .select__hidden_menu{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #388CDA;
+    border-radius: 9px;
+    background: #FFF;
+    padding: 4px 0;
+    z-index: 5;
+}
+
+main .buttons_menu .buttons_menu__right .select .select__hidden_menu a{
+    display: flex;
+    position: relative;
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    text-decoration: none;
+    padding: 8px 11px;
+    cursor: pointer;
+}
+
+main .buttons_menu .buttons_menu__right .select .select__hidden_menu a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #D9D9D9;
+}
+
+main .buttons_menu .buttons_menu__right .select .select__hidden_menu a:last-child:before{
+    display: none;
+}
+
+
+
+main .table{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    border-radius: 25px;
+    border: 1px solid #000;
+    background: #FFF;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0 24px;
+    margin-bottom: 48px;
+}
+
+main .table .table__block{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    position: relative;
+    padding: 19px 0;
+    margin-right: 19px;
+}
+
+main .table .table__block:last-child{
+    margin-right: 0;
+}
+
+main .table .table__block::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #000;
+}
+
+main .table .table__block:last-child:before{
+    display: none;
+}
+
+main .table .table__block a{
+    width: fit-content;
+    color: #388CDA;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    border-bottom: 2px dashed #388CDA;
+    text-decoration: none;
+}
+
+main .table .table__block a:hover{
+    border-bottom: 2px dashed #388cda00;
+}

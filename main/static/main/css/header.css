@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+body.lock{
+    overflow-y: hidden;
+    margin-right: 16px;
+}
+
+
+
+.none{
+    display: none !important;
+}
+
+
+
+header{
+    position: relative;
+    margin: 41px 70px 20px;
+    z-index: 5;
+}
+
+
+
+header .header_up{
+    display: flex;
+    align-items: center;
+}
+
+header .header_up__left{
+    width: 100%;
+}
+
+header .header_up__left .logo{
+    display: flex;
+    width: 430px;
+}
+
+header .header_up__left .logo img{
+    width: 100%;
+}
+
+
+header .header_up__right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+header .header_up__right .button_search{
+    width: 33px;
+    height: 33px;
+}
+
+header .header_up__right .button_search img{
+    width: 100%;
+    height: 100%;
+}
+
+header .header_up__right .button_sing_up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 150px;
+    height: 38px;
+    color: #FFF;
+    text-align: center;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 93px;
+    background-color: black;
+}
+
+header .header_up__right .button_sing_out{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 70px;
+    height: 38px;
+    color: #9A9A9A;
+    text-align: center;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 93px;
+}
+
+header .header_up__right .account_userpic{
+    width: 72px;
+    height: 72px;
+}
+
+header .header_up__right .account_userpic img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+header .header_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+header .header_menu .header_menu__button{
+    position: relative;
+}
+
+header .header_menu .header_menu__button .button{
+    display: flex;
+    width: 100%;
+    color: #272727;
+    text-align: center;
+    font-family: "OpenSans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 15px 10px;
+    transition: all .3s ease;
+}
+
+header .header_menu .header_menu__button .button:hover{
+    color: #FFF;
+    background-color: black;
+}
+
+header .header_menu .header_menu__button._active .button{
+    color: #FFF;
+    background-color: black;
+}
+
+header .header_menu .header_menu__button .links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    min-width: 278px;
+    height: 0;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    z-index: 5;
+    padding: 0 20px;
+    border-radius: 0px 0px 5px 5px;
+    background: rgba(0, 0, 0, 0.74);
+    backdrop-filter: blur(2.5px);
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+header .header_menu .header_menu__button:last-child .links{
+    right: 0;
+    left: auto;
+}
+
+header .header_menu .header_menu__button .links .link{
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+    text-decoration: none;
+}

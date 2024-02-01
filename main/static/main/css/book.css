@@ -1,0 +1,471 @@
+main{
+    width: calc(100% - 140px);
+    height: 100%;
+    margin: 0 auto 40px;
+}
+
+main .book{
+    width: 100%;
+    height: 646px;
+    position: relative;
+    padding: 30px 60px;
+    border-radius: 25px;
+    background: url("../img/book/book_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main .book__bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.90);
+    backdrop-filter: blur(5px); 
+}
+
+
+
+
+main .book .book__header{
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+
+main .book .book__header .book__header__left{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+main .book .book__header .book__header__left .button_load{
+    position: relative;
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    text-decoration: none;
+}
+
+main .book .book__header .book__header__left .button_load span{
+    position: absolute;
+    right: -40px;
+}
+
+
+main .book .book__header .book__header__right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+}
+
+
+main .book .book__header .book__header__right input{
+    width: 440px;
+    height: 40px;
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 9px;
+    background: #FFF;
+    border: none;
+    padding: 0 24px;
+}
+
+main .book .book__header .book__header__right input:focus{
+    outline: none;
+}
+
+
+
+
+main .book .book__info{
+    display: flex;
+    width: 100%;
+    margin-top: 35px;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+main .book .book__info .book__info__left{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: fit-content;
+}
+
+main .book .book__info .book__info__left .book_cover{
+    width: 278px;
+    height: 410px;
+    object-fit: cover;
+}
+
+main .book .book__info .book__info__left .stars{
+    display: flex;
+}
+
+main .book .book__info .book__info__left .stars .star{
+    position: relative;
+    width: 56px;
+    height: 56px; 
+}
+
+main .book .book__info .book__info__left .stars .star::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/book/star.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main .book .book__info .book__info__left .stars .star::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/book/star_full.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+main .book .book__info .book__info__left .stars .star._active::after{
+    opacity: 1;
+}
+
+
+
+main .book .book__info .book__info__right{
+    position: relative;
+    width: 100%;
+    margin-left: 53px;
+}
+
+main .book .book__info .book__info__right .block_info{
+    width: 800px;
+    margin-bottom: 10px;
+}
+
+
+main .book .book__info .book__info__right .block_info p{
+    color: #FFF;
+    font-family: "OpenSans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+main .book .book__info .book__info__right .block_info p .title{
+    font-weight: 700;
+}
+
+
+main .book .book__info .book__info__right .description{
+    height: 250px;
+    position: relative;
+    margin-top: 30px;
+}
+
+main .book .book__info .book__info__right .description::before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    width: 385px;
+    height: 1px;
+    background: #FFF;
+}
+
+
+main .book .book__info .book__info__right .button_dowload{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+main .book .book__info .book__info__right .button_dowload a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 70px;
+    color: #272727;
+    font-family: "DelaGothicOne", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 2px;
+    background-color: #FFF;
+    transition: all .3s ease;
+}
+
+main .book .book__info .book__info__right .button_dowload a:hover{
+    color: #FFF;
+    background-color: #272727;
+}
+
+
+main .book .book__info .book__info__right .rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 146px;
+    height: 89px; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 2px;
+    background: #FFF; 
+}
+
+main .book .book__info .book__info__right .rating p{
+    color: #272727;
+    text-align: center;
+    font-family: "DelaGothicOne", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+
+
+
+
+main .reviews{
+    position: relative;
+    width: 100%;
+    padding: 0 64px;
+    margin-top: 32px;
+}
+
+
+
+main .reviews .reviews__separator{
+    width: 100%;
+    position: absolute;
+    top: 393px;
+    left: 0;
+}
+
+
+
+main .reviews .reviews__title{
+    position: relative;
+    width: fit-content;
+    margin-bottom: 50px;
+}
+
+main .reviews .reviews__title h1{
+    color: #000;
+    font-family: "DelaGothicOne", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+main .reviews .reviews__title svg{
+    width: 100%;
+    position: absolute;
+    top: 30px;
+}
+
+
+
+main .reviews .write_review{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+
+main .reviews .reviews__write_review textarea{
+    width: 100%;
+    height: 211px;
+    padding: 16px 28px;
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    border: none;
+    border-radius: 25px;
+    background: #EFEFEF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+}
+
+main .reviews .reviews__write_review textarea:focus{
+    outline: none;
+}
+
+main .reviews .reviews__write_review textarea::placeholder{
+    color: #666;
+    font-family: "OpenSans", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+
+main .reviews .reviews__write_review .button_write_review{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-top: 20px;
+}
+
+main .reviews .reviews__write_review .button_write_review a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 60px;
+    color: #FFF;
+    font-family: "DelaGothicOne", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 2px;
+    background-color: #272727;
+    border: solid 4px #272727;
+    transition: all .3s ease;
+}
+
+main .reviews .reviews__write_review .button_write_review a:hover{
+    color: #272727;
+    background-color: #FFF;
+}
+
+
+
+main .reviews .reviews__list{
+    width: 100%;
+    margin-top: 60px;
+}
+
+main .reviews .reviews__list .user_review{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+main .reviews .reviews__list .user_review .user_review__header{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+main .reviews .reviews__list .user_review .user_review__header .userpic{
+    width: 72px;
+    height: 72px;
+}
+
+main .reviews .reviews__list .user_review .user_review__header .userpic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+main .reviews .reviews__list .user_review .user_review__header .full_name{
+    color: #000;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
+
+main .reviews .reviews__list .user_review .user_review__header .stars{
+    display: flex;
+}
+
+
+main .reviews .reviews__list .user_review .review{
+    width: 100%;
+    min-height: 100px;
+    padding: 16px 28px;
+    color: #666;
+    font-family: "OpenSans", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    border: none;
+    border-radius: 25px;
+    background: #EFEFEF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+}
+
+
+main .reviews .reviews__list .icon_arrow_down{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 33px;
+}
+
+main .reviews .reviews__list .icon_arrow_down a img{
+    width: 55px;
+    filter: invert(1);
+}
+
+
+main .reviews .reviews__list .reviews_none{
+    color: #666;
+    font-family: "OpenSans", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+
+
+
+
+main .patterns img{
+    position: absolute;
+    z-index: -1;
+}
+
+main .patterns img:nth-child(1){
+    top: 750px;
+    right: 10px;
+}
+
+main .patterns img:nth-child(2){
+    top: 1315px;
+    left: 10px;
+}
+
+main .patterns img:nth-child(3){
+    top: 1400px;
+    left: 70px;
+}

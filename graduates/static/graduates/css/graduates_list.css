@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+}
+
+main{
+    padding: 0 66px;
+}
+
+table{
+    display: flex;
+    width: 100%;
+    height: 670px;
+    border-radius: 25px;
+    border: 1px solid #000;
+    background: #FFF;
+    border-collapse: collapse;
+    margin-bottom: 48px;
+}
+
+table tr th{
+    width: 367px;
+    text-align: left;
+    padding: 0 20px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400; 
+    line-height: 22px;
+}
+ 
+table tr th:last-child{
+    border-right: none;
+}
+
+
+table tr{
+    width: 100%;
+    height: 44px; 
+}
+
+table tr td{
+    width: 367px;
+    padding: 0 20px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    font-family: "OpenSans", sans-serif;
+}
+
+table tr td:last-child{
+    border-right: none;
+
+}
+
+
+
+.patterns img{
+    position: absolute;
+    z-index: 2;
+}
+
+.patterns img:nth-child(1){
+    top: 185px;
+    left: 54px;
+    width: 45px;
+    height: 45px;
+}

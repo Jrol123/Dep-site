@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="StarkUnfassbar">
+    <meta name="description" content="Сайт для депортамента. Вход">
+
+    <title>Вход</title>
+    <link rel="stylesheet" href="{% static 'users/css/sign_in.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+
+    <link rel="stylesheet" href="{% static 'users/css/sign_in_media.css' %}">
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">
+            <img src="{% static 'main/img/header/logo.png' %}" alt="">
+        </a>
+    </header>
+
+    <main>    
+        <form action="/users/sign_in/" method="post">
+            {% csrf_token %} 
+            <h1 class="form_title">Вход</h1>
+
+            <div class="form_groups">
+                <div class="form_group">
+                    <label class="form_label" for="username">Введите логин:</label>
+                    <input class="form_input" type="text" id="username" name="username" required>
+                </div>
+    
+                <div class="form_group">
+                    <label class="form_label" for="password">Введите пароль:</label>
+                    <input class="form_input" type="password" id="password" name="password" required>
+                </div>
+            </div>
+     
+            <button class="button" type="submit">Войти</button>
+    
+            <div class="link">
+                <a href="/users/sign_up/">У меня ещё нет аккаунта</a>
+            </div>
+        </form>
+
+        <div class="patterns">
+            <img src="{% static 'users/img/pattern_1.png' %}" alt="">
+            <img src="{% static 'users/img/pattern_2.png' %}" alt="">
+    
+            <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="566" viewBox="0 0 1600 566" fill="none">
+                <path d="M0 250L216 466L321.5 364.5L470 384L1109 0.5L1600 229.5V296L1062 148L470 437.5L363.5 415L188 566L0 296V250Z" fill="#ABDCFF"/>
+            </svg>
+        </div>     
+    </main>
+
+    {% include 'main/footer.html' %}
+</body>
+</html>

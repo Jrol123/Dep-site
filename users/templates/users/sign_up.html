@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="StarkUnfassbar">
+    <meta name="description" content="Сайт для депортамента. Регистрация">
+
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{% static 'users/css/sign_up.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+
+    <link rel="stylesheet" href="{% static 'users/css/sign_up_media.css' %}">
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">
+            <img src="{% static 'main/img/header/logo.png' %}" alt="">
+        </a>
+    </header>
+
+    <main>
+        <!-- {% if form.errors %}
+           {{ form.errors }}
+        {% endif %} -->
+        <form class="form" action="/users/sign_up/" method="post" data-errors="">
+            {% csrf_token %}
+            <h1 class="form_title">Регистрация</h1>
+
+            <div class="form_groups">
+                <div class="form_group">
+                    <label class="form_label" for="first_name">Введите своё имя:</label>
+                    <input class="form_input" type="text" id="first_name" name="first_name" required>
+                </div>
+    
+                <div class="form_group">
+                    <label class="form_label" for="last_name">Введите свою фамилию:</label>
+                    <input class="form_input" type="text" id="last_name" name="last_name" required>
+                </div>
+    
+                <div class="form_group">
+                    <label class="form_label" for="patronymic">Введите своё отчество:</label>
+                    <input class="form_input" type="text" id="patronymic" name="patronymic" required>
+                </div>
+    
+                <div class="form_group">
+                    <label class="form_label" for="email">Введите свою электронную почту:</label>
+                    <input class="form_input" type="text" id="email" name="email" required>
+                </div>
+    
+                <div class="form_group">
+                    <label class="form_label" for="username">Введите логин:</label>
+                    <input class="form_input" type="text" id="username" name="username" required>
+                </div>
+    
+                <div class="form_group">
+                    <label class="form_label" for="password1">Введите пароль:</label>
+                    <input class="form_input" type="password" id="password1" name="password1" required>
+                </div>
+    
+                <div class="form_group">
+                    <label class="form_label" for="password2">Повторите введенный пароль:</label>
+                    <input class="form_input" type="password" id="password2" name="password2" required>
+                </div>
+            </div>
+
+            <button class="button" type="submit">Зарегистрироваться</button>
+
+            <div class="link">
+                <a href="/users/sign_in/">У меня уже есть аккаунт</a>
+            </div>
+        </form>
+
+        <div class="patterns">
+            <img src="{% static 'login/img/pattern_3.png' %}" alt="">
+            <img src="{% static 'login/img/pattern_4.png' %}" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="605" viewBox="0 0 1600 605" fill="none">
+                <path d="M0 341L217 109.5L321.5 226.5L470 207L1096.5 605L1600 382V341L1145 493.5L506.5 176H354L170 0L0 295V341Z" fill="#ABDCFF"/>
+            </svg>
+        </div>
+    </main>
+
+    {% include 'main/footer.html' %}
+</body>
+</html>

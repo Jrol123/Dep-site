@@ -1,0 +1,130 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="StarkUnfassbar">
+    <meta name="description" content="Сайт для депортамента. Библиотека">
+    
+    <meta name="csrf-token" content="{{ csrf_token }}">
+
+    <title>Библиотека</title>
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'library/css/library.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/popup_tooltip.css' %}">
+    <link rel="stylesheet" href="{% static 'library/css/post_book.css' %}">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+    {% include 'main/header.html' %}
+
+    <main>
+        <div class="digital_library">
+            <div class="digital_library__header">
+                <div class="digital_library__header__left">
+                    <div class="title">
+                        <h1>Цифровая библиотека</h1>
+                        <svg width="234" height="2" viewBox="0 0 234 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1C83.7843 1 153.517 1 177.91 1H234" stroke="white"/>
+                        </svg> 
+                    </div>
+    
+                    {% if user.is_authenticated %}
+                        <a href="" class="button_load" id="button_post_book">
+                            Выложить книгу
+                            <span>
+                                <img src="{% static 'library/img/library/button_load_icon.png' %}" alt="">
+                            </span>
+                        </a>
+                    {% endif %}
+                </div>
+
+                <div class="digital_library__header__right">
+                    <input type="search" placeholder="Поиск...">
+
+                    <div class="select" data-orderby="{{ order_by }}" id="select_order_book">
+                        <p class="select__text">Сортировка по</p>
+                        <div class="select__separator"></div>
+                        <span>></span>
+
+                        <div class="select__hidden_menu none">
+                            <a href="order_by_title">Название</a>
+                            <a href="order_by_author">Автор</a>
+                            <a href="order_by_discipline">Дисциплина</a>
+                            <a href="order_by_user">Кто выложил</a>
+                            <a href="order_by_average_rating">Рейтинг</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="digital_library__list">
+                <div class="digital_library__list__titles">
+                    <p class="title">Название</p>
+                    <p class="title">Автор</p>
+                    <p class="title">Дисциплина</p>
+                    <p class="title">Кто выложил</p>
+                    <p class="title">Рейтинг</p>
+                </div>
+
+                <div class="digital_library__list__books">
+                    {% for book in books %}
+                        <a href="book/{{book.id}}/" class="book">
+                            <p class="book__info">{{ book.title }}</p>
+                            <p class="book__info">{{ book.author }}</p>
+                            <p class="book__info">{{ book.discipline }}</p>
+                            <p class="book__info">{{ book.user}}</p>
+                            <p class="book__info">{{ book.average_rating}}</p>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            
+                
+            <div class="pagination">
+                {% if books.has_previous %}
+                    <div class="pagination_button_prev">
+                        <a style="color: aliceblue;" href="?page={{ books.previous_page_number }}"><</a>
+                    </div>
+                {% endif %}
+
+                <ul class="pagination_list">
+                    {% for p in books.paginator.page_range %}
+                        {% if books.number == p %}
+                            <li>
+                                <a style="color: rgb(95, 167, 230);" href="?page={{ p }}">{{ p }}</a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a style="color: aliceblue;" href="?page={{ p }}">{{ p }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+
+                {% if books.has_next %}
+                    <div class="pagination_button_prev">
+                        <a style="color: aliceblue;" href="?page={{ books.next_page_number }}">></a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </main>
+
+    {% include 'main/footer.html' %}
+
+    {% include 'library/post_book.html' %}
+    
+    
+    <script src="{% static 'main/js/header.js' %}"></script>
+    <script src="{% static 'main/js/popup_tooltip.js' %}"></script>
+    <script src="{% static 'library/js/library_select.js' %}"></script>
+    <script src="{% static 'library/js/post_book.js' %}"></script>
+    <script src="{% static 'main/js/select.js' %}"></script>
+</body>
+</html>

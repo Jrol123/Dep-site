@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="StarkUnfassbar">
+    <meta name="description" content="Сайт для депортамента. ВКР темы">
+
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    
+    <title>Тема выпускной квалификационной работы</title>
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'vkr/css/vkr_topics.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/popup_tooltip.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+
+    {% include 'main/header.html' %}
+
+    <main>
+        <div class="vkr_topic_block">
+            <div class="header">
+                <h1>Тема выпускной квалификационной работы</h1>
+            </div>
+
+            <div class="input_fields">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Тема ВКР"></textarea>
+                <input type="text" name="full_name" id="" placeholder="ФИО руководителя">
+                <input type="text" name="telephon" id="" placeholder="Номер телефона">
+            </div>
+
+            <p class="alert">Внимание! редактирование темы возможно до 00.00.2024 включительно!</p>
+
+            <div class="button_confirm">
+                <a href="">Подтвердить</a>
+            </div>
+        </div>
+    </main>
+
+    {% include 'main/footer.html' %}
+
+    <script src="{% static 'main/js/header.js' %}"></script>
+    <script src="{% static 'main/js/popup_tooltip.js' %}"></script>
+    <script src="{% static 'vkr/js/vkr_topics.js' %}"></script>
+</body>
+</html>  

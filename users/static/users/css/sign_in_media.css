@@ -1,0 +1,56 @@
+@media screen and (min-width: 1700px) {
+    .patterns svg{
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .patterns img:nth-child(2){
+        right: 130px;  
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .patterns img:nth-child(1){
+        left: 100px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .patterns img:nth-child(1){
+        width: 25%;
+        left: 25px;
+    }
+    .patterns img:nth-child(2){
+        width: 25%;
+        right: 25px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .patterns :nth-child(1){
+        display: none;
+      }
+    .patterns :nth-child(2){
+        display: none;
+      }
+
+}
+
+@media screen and (max-width: 576px) {
+    form{
+        width: 360px;
+    }
+    form .button{
+        width: 300px;
+    }
+    form .form_input{
+        width: 300px;
+    }
+    header{
+        width: 80%;
+        left: 40px;
+    }
+    
+}

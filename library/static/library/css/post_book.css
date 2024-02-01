@@ -1,0 +1,349 @@
+.popup__post_book{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7); 
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 5;
+    transition: all .8s ease;
+    opacity: 0;
+}
+
+.popup__post_book._active{
+    opacity: 1;
+}
+
+.popup__post_book .popup__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 30px 0;
+}
+
+.popup__post_book .popup__content{
+    position: relative;
+    width: 1054px;
+    height: fit-content;
+    border-radius: 25px;
+    background: #FFF;
+    padding: 40px 45px;
+    transition: all .8s ease;
+    transform: translate(0%, -10%);
+}
+
+.popup__post_book._active .popup__content{
+    transform: translate(0%, 0%);
+}
+
+
+.popup__post_book .popup__body .popup__content .popup__close{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    pointer-events: none;
+}
+
+.popup__post_book .popup__body .popup__content .popup__close svg{
+    pointer-events: painted;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+
+.popup__post_book .popup__body .popup__content .post_book__header{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.popup__post_book .popup__body .popup__content .post_book__header h1{
+    color: #000;
+    text-align: center;
+    font-family: "OpenSans", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700; 
+}
+
+
+
+
+.popup__post_book .popup__body .popup__content .post_book__form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line{
+    display: flex;
+    align-items: start;
+}
+
+
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__left{
+    width: 100%;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__left p{
+    width: 100%;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400; 
+    line-height: 30px;
+}
+
+
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right{
+    width: 80%;
+}
+
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right label{
+    display: block;
+    max-width: 400px;
+    color: #388CDA;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400; 
+    line-height: 30px;
+    text-decoration: underline dashed;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 6px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right label:hover{
+    text-decoration: none;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right label._none_val{
+    color: red;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right input[type="file"]{
+    display: none;
+}
+
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right input[type="text"]{
+    width: 100%;
+    height: 35px; 
+    border: none;
+    border-radius: 6px;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400; 
+    background: #EFEFEF;
+    padding: 0 10px;
+    outline: none;
+    border: 2px solid #EFEFEF;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right input[type="text"]::placeholder{
+    color: #9A9A9A;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    opacity: .5;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right input[type="text"]:focus {
+    border: 2px solid #388CDA;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right input[type="text"]._none_val{
+    border: 2px solid red;
+}
+
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right textarea{
+    width: 100%;
+    height: 211px;
+    min-height: 211px;
+    border: none;
+    border-radius: 6px;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400; 
+    background: #EFEFEF;
+    padding: 8px 10px;
+    outline: none;
+    border: 2px solid #EFEFEF;
+    resize: vertical;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right textarea::placeholder{
+    color: #9A9A9A;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    opacity: .5;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right textarea:focus {
+    border: 2px solid #388CDA;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right textarea._none_val{
+    border: 2px solid red;
+}
+
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right .select{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 40px;
+    border-radius: 6px;
+    background: #EFEFEF;
+    padding: 8px;
+    cursor: pointer;
+    user-select: none;
+    border: 2px solid #EFEFEF;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right .select._active{
+    border: 2px solid #388CDA;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right .select._none_val{
+    border: 2px solid red;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right .select .select__text{
+    color: #9A9A9A;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    opacity: .5;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right .select .select__text._active{
+    color: #000;
+    opacity: 1;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right .select span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px; 
+    position: absolute;
+    right: 0;
+    color: #000;
+    text-align: center;
+    font-family: "OpenSans", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    transform: rotate(90deg); 
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right .select._active span{
+    transform: rotate(-90deg); 
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right .select .select__separator{
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 1px;
+    height: 100%;
+    background: #D9D9D9;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right .select .select__hidden_menu{
+    height: 150px;
+    max-height: 150px;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    border: 2px solid #388CDA;
+    background: #EFEFEF;
+    padding: 4px 0;
+    z-index: 5;
+    overflow-y: auto;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right .select .select__hidden_menu a{
+    display: flex;
+    position: relative;
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    text-decoration: none;
+    padding: 8px 11px;
+    cursor: pointer;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right .select .select__hidden_menu a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #D9D9D9;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__form .form_line .form_line__right .select .select__hidden_menu a:last-child:before{
+    display: none;
+}
+
+
+
+
+.popup__post_book .popup__body .popup__content .post_book__button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 37px;
+}
+
+.popup__post_book .popup__body .popup__content .post_book__button a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 284px;
+    height: 58px; 
+    color: #FFF;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700; 
+    border-radius: 9px;
+    background: #8AB8EE; 
+}

@@ -1,0 +1,201 @@
+main{
+    display: flex;
+    width: calc(100% - 140px);
+    height: 670px; 
+    position: relative;
+    margin: 0 auto 100px;
+    border-radius: 25px;
+    border: 1px solid #000; 
+}
+
+
+
+main .calendar{
+    position: relative;
+    width: 100%;
+}
+
+
+main .calendar .arrow{
+    height: 55px;
+    position: absolute;
+    top: calc(50% - 15px);
+    filter: invert(1);
+}
+
+main .calendar .arrow img{
+    width: 100%;
+    height: 100%;
+    object-fit: 100%;
+}
+
+main .calendar .button_next_month{
+    right: 25px;
+    transform: rotate(180deg);
+}
+
+main .calendar .button_prev_month{
+    left: 25px;
+}
+
+
+main .calendar .month{
+    display: flex;
+    align-items: end;
+    gap: 15px;
+    width: fit-content;
+    position: relative;
+    margin: 21px 0 0 69px;
+}
+
+main .calendar .month h1{
+    position: relative;
+    color: #000;
+    font-family: "DelaGothicOne", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+main .calendar .month h1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    height: 2px;
+    background: #000;
+}
+
+main .calendar .month .year{
+    position: relative;
+    color: #000;
+    font-family: "DelaGothicOne", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+
+main .calendar .month_days{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+}
+
+main .calendar table tr{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+main .calendar table .week th{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 58px;
+    height: 58px; 
+    color: #000;
+    text-align: justify;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400; 
+}
+
+main .calendar table tr td{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 58px; 
+    color: #000;
+    text-align: justify;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    background: #ABDCFF;
+    cursor: pointer;
+    user-select: none;
+}
+
+main .calendar table tr td._active{
+    background: #97c4e5;
+}
+
+main .calendar table tr td.another_month{
+    background-color: #EAEAEA;
+}
+
+
+
+main .separator{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+}
+
+
+
+main .booking_audience{
+    display: flex;
+    gap: 29px;
+    width: 100%;
+    padding: 85px 0 0 49px;
+}
+
+
+main .booking_audience .audience_none_cells{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+main .booking_audience .audience_none_cells h1{
+    color: #000;
+    text-align: justify;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400; 
+    margin: 240px auto;
+}
+
+
+main .booking_audience .audience_cells{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+main .booking_audience .audience_cells .audience_nubmer{
+    color: #000;
+    font-family: "DelaGothicOne", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400; 
+    margin-bottom: 9px;
+}
+
+main .booking_audience .audience_cells .audience_cell{
+    display: flex;
+    align-items: center;
+    width: 278px;
+    height: 50px;
+    color: #000;
+    text-align: justify;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400; 
+    text-decoration: none;
+    background: #EAEAEA; 
+    padding-left: 21px;
+}
+
+main .booking_audience .audience_cells .audience_cell._free{
+    background: #ABDCFF; 
+}

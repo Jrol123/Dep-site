@@ -1,0 +1,87 @@
+<div class="popup__post_book none">
+    <div class="popup__body">
+        <div class="popup__content">
+            <div class="popup__close">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8981 15.982L24.9261 23.0164C25.446 23.5367 25.4456 24.38 24.9253 24.8999C24.405 25.4197 23.5617 25.4194 23.0418 24.899L16.0133 17.8641L8.9684 24.8985C8.44791 25.4182 7.60465 25.4176 7.08493 24.8971C6.56522 24.3766 6.56584 23.5333 7.08633 23.0136L14.1306 15.9798L7.0893 8.93205C6.56943 8.41171 6.56981 7.56846 7.09015 7.04859C7.61049 6.52872 8.45374 6.5291 8.97361 7.04944L16.0155 14.0977L23.0421 7.08157C23.5626 6.56185 24.4058 6.56248 24.9255 7.08297C25.4453 7.60346 25.4446 8.44672 24.9241 8.96643L17.8981 15.982Z" fill="white"/>
+                </svg> 
+            </div>
+
+            <div class="post_book__header">
+                <h1>Выложить книгу</h1>
+            </div>
+
+            <div class="post_book__form">
+                <div class="form_line">
+                    <div class="form_line__left">
+                        <p>Прикрепите книгу в pdf-формате:</p>
+                    </div>
+                    <div class="form_line__right">
+                        <input type="file" name="file_book" id="input_file_book" class="input_file">
+                        <label for="input_file_book">Выберите файл</label>
+                    </div>
+                </div>
+
+                <div class="form_line">
+                    <div class="form_line__left">
+                        <p>Прикрепите обложку книги (необязательно):</p>
+                    </div>
+                    <div class="form_line__right">
+                        <input type="file" name="file_img" id="input_file_img" class="input_file">
+                        <label for="input_file_img">Выберите файл</label>
+                    </div>
+                </div>
+
+                <div class="form_line">
+                    <div class="form_line__left">
+                        <p>Напишите название книги:</p>
+                    </div>
+                    <div class="form_line__right">
+                        <input type="text" name="name_book" id="" placeholder="Название книги">
+                    </div>
+                </div>
+
+                <div class="form_line">
+                    <div class="form_line__left">
+                        <p>Напишите ФИО автора(ов):</p>
+                    </div>
+                    <div class="form_line__right">
+                        <input type="text" name="author_full_name" id="" placeholder="ФИО автора(ов)">
+                    </div>
+                </div>
+
+                <div class="form_line">
+                    <div class="form_line__left">
+                        <p>Напишите название дисциплины:</p>
+                    </div>
+                    <div class="form_line__right">
+                        <div class="select" id="select">
+                            <p class="select__text name_discipline">Название дисциплины</p>
+                            <div class="select__separator"></div>
+                            <span>></span>
+
+                            <div class="select__hidden_menu none">
+                                {% for discipline in discipline_list %}
+                                    <a href="">{{ discipline }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form_line">
+                    <div class="form_line__left">
+                        <p>Напишите краткое описание книги:</p>
+                    </div>
+                    <div class="form_line__right">
+                        <textarea name="description_book" id="" cols="30" rows="10" placeholder="Краткое описание"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post_book__button">
+                <a href="">Выложить</a>
+            </div>
+        </div>
+    </div>
+</div>

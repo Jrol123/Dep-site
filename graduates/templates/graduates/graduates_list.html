@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="StarkUnfassbar">
+    <meta name="description" content="Сайт для депортамента. Список выпускников">
+
+    <!-- поменяй css -->
+    <!-- поменяй img -->
+    
+    <title>Список выпускников</title>
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'graduates/css/graduates_list.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/popup_tooltip.css' %}">
+</head>
+<body>
+
+    {% include 'main/header.html' %}
+
+    <main>
+        <table>
+            <tr>
+                <th>Выпускник</th>
+                <th>Год</th>
+                <th>Направление</th>
+                <th>Место работы</th>
+            </tr>
+
+            {% for graduate in graduates %}
+                <tr>
+                    <td>{{ graduate.fio }}</td>
+                    <td>{{ graduate.date|date:"Y" }} г.</td>
+                    <td>{{ graduate.group }}</td>
+                    <td>{{ graduate.place_work }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </main>
+
+    {% include 'main/footer.html' %}
+
+
+    <div class="patterns">
+        <img src="{% static 'graduates/img/star.svg' %}" alt="">
+    </div>
+
+
+    <script src="{% static 'main/js/header.js' %}"></script>
+    <script src="{% static 'main/js/popup_tooltip.js' %}"></script>
+</body>
+</html>   

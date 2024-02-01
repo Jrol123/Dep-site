@@ -1,0 +1,279 @@
+body{
+    margin: 0;
+}
+
+main{
+    padding: 0 66px;
+}
+
+table{
+    display: flex;
+    width: 100%;
+    height: 670px;
+    border-radius: 25px;
+    border: 1px solid #000;
+    background: #FFF;
+    border-collapse: collapse;
+    margin-bottom: 27px;
+}
+
+table tr{
+    width: 100%;
+    height: 44px; 
+}
+
+
+
+main table tr th{
+    width: 367px;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    padding: 7px 20px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+table tr th:nth-child(1){
+    padding: 7px 15px;
+}
+
+table tr th:nth-child(5){
+    padding: 7px 10px;
+}
+
+table tr th:nth-child(6){
+    padding: 7px 5px;
+    position: relative;
+    cursor: default;
+}
+
+table tr th:nth-child(7){
+    padding: 7px 5px;
+    position: relative;
+    cursor: default;
+}
+
+table tr th:nth-child(8){
+    padding: 7px 5px;
+    position: relative;
+    cursor: default;
+}
+
+table tr th:nth-child(9){
+    padding: 7px 5px;
+    position: relative;
+    cursor: default;
+}
+
+table tr th:nth-child(10){
+    padding: 7px 5px;
+    position: relative;
+    cursor: default;
+}
+
+table tr th:nth-child(11){
+    padding: 7px 5px;
+    position: relative;
+    cursor: default;
+}
+
+table tr th:nth-child(12){
+    padding: 7px 5px;
+    position: relative;
+    cursor: default;
+}
+
+table tr th:nth-child(13){
+    padding: 7px 5px;
+    position: relative;
+    cursor: default;
+}
+ 
+main table tr th:last-child{
+    border-right: none;
+}
+
+table tr th .table_tooltip{
+    position: absolute;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background: #000; 
+    z-index: 3;
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+
+table tr th:hover .table_tooltip{
+    opacity: 1;
+    pointer-events: painted;
+}
+
+
+table tr th .table_tooltip p{
+    min-width: 120px;
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+table tr th .table_tooltip svg{
+    position: absolute;
+    top: -8px;
+    left: calc(50% - 11px);
+}
+
+
+table tr th:nth-child(6) .table_tooltip{
+    top: 60px;
+    left: -50px;
+}
+
+table tr th:nth-child(7) .table_tooltip{
+    top: 60px;
+    left: -50px;
+}
+
+table tr th:nth-child(8) .table_tooltip{
+    top: 70px;
+    left: -40px;
+}
+
+table tr th:nth-child(9) .table_tooltip{
+    top: 70px;
+    left: -70px;
+}
+
+table tr th:nth-child(10) .table_tooltip{
+    top: 80px;
+    left: -50px;
+}
+
+table tr th:nth-child(11) .table_tooltip{
+    top: 70px;
+    left: -50px;
+}
+
+table tr th:nth-child(12) .table_tooltip{
+    top: 70px;
+    left: -50px;
+}
+
+table tr th:nth-child(13) .table_tooltip{
+    top: 80px;
+    left: -50px;
+}
+
+
+
+table tr td{
+    width: 367px;
+    font-family: "OpenSans", sans-serif;
+    text-align: left;
+    padding: 10px 20px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+table tr td:last-child{
+    border-right: none;
+}
+
+table tr td:nth-child(1){
+    width: 2%;
+    text-align: center;
+    padding: 0 10px;
+}
+
+table tr td:nth-child(2){
+    width: 15%;
+}
+
+table tr td:nth-child(3){
+    width: 15%;
+}
+
+table tr td:nth-child(4){
+    width: 15%;
+}
+
+table tr td:nth-child(5){
+    width: 3%;
+    text-align: center;
+}
+
+table tr td:nth-child(6){
+    width: 3%;
+    padding: 0;
+}
+
+table tr td:nth-child(7){
+    width: 3%;
+    padding: 0;
+}
+
+table tr td:nth-child(8){
+    width: 3%;
+    padding: 0;
+}
+
+table tr td:nth-child(9){
+    width: 3%;
+    padding: 0;
+}
+
+table tr td:nth-child(10){
+    width: 3%;
+    padding: 0;
+}
+
+table tr td:nth-child(11){
+    width: 3%;
+    padding: 0;
+}
+
+table tr td:nth-child(12){
+    width: 3%;
+    padding: 0;
+}
+
+table tr td:nth-child(13){
+    width: 3%;
+    padding: 0;
+}
+
+table tr td .checkbox{
+    margin: 0 auto;
+}
+
+table tr td .grade{
+    width: 30px;
+    height: 30px;
+    font-family: "OpenSans", sans-serif;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 2px;
+    border: 1px solid #9A9A9A;
+    cursor: pointer;
+    margin: 0 auto;
+    outline: none;
+}
+
+
+
+.patterns img{
+    position: absolute;
+    z-index: -1;
+}
+
+.patterns img:nth-child(1){
+    top: 400px;
+    right:  0
+}

@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="StarkUnfassbar">
+    <meta name="description" content="Сайт для депортамента. ВКР темы">
+
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    
+    <title>Организация защит</title>
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/popup_tooltip.css' %}">
+    <link rel="stylesheet" href="{% static 'vkr/css/creat_vkr_protection.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+
+    {% include 'main/header.html' %}
+
+    <main>
+        <div class="vkr_protection_organization">
+            <div class="header">
+                <h1>Добавить дату защиты</h1>
+            </div>
+
+            <div class="input_fields">
+                <div class="date">
+                    <div class="input_field">
+                        <p>Дата:</p>
+                        <input name="date" type="text" placeholder="введите дату: 00.00.0000">
+                    </div>
+
+                    <div class="input_field">
+                        <p>Время:</p>
+                        <input name="time" type="text" placeholder="введите время: 00:00">
+                    </div>
+                </div>
+
+                <div class="groups">
+                    <p>Группы:</p>
+
+                    <div class="select" id="select">
+                        <div class="select__text">
+                            <p class="text_placeholder">Выберите группы</p>
+                        </div>
+                        <div class="select__separator"></div>
+                        <span>></span>
+    
+                        <div class="select__hidden_menu none">                       
+                            {% for group_name in group_names %}
+                                <a href="">{{ group_name }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button_members_commission">
+                    <a href="">
+                        Добавить члена комиссии
+                        <img src="{% static 'vkr/img/icons/icon_plus.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="members_commission">
+                    <input name="full_name_members" type="text" placeholder="Введите фио члена комисии">
+
+                    <div class="input_field">
+                        <p>Секретарь:</p>
+                        <input name="full_name_secretary" type="text" placeholder="Введите фио секретаря">
+                    </div>
+                </div>
+            </div>
+
+            <div class="button_confirm">
+                <a href="">Подтвердить</a>
+            </div>
+        </div>
+    </main>
+
+    {% include 'main/footer.html' %}
+
+    <script src="{% static 'main/js/header.js' %}"></script>
+    <script src="{% static 'main/js/popup_tooltip.js' %}"></script>
+    <script src="{% static 'vkr/js/creat_vkr_protection.js' %}"></script>
+    <script src="{% static 'vkr/js/creat_vkr_protection_select.js' %}"></script>
+</body>
+</html>  

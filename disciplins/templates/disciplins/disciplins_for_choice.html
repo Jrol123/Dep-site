@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="StarkUnfassbar">
+    <meta name="description" content="Сайт для депортамента. ВКР архив">
+
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    
+    <title>Дисциплины, экзамены и зачеты</title>
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'disciplins/css/disciplins_for_choice.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/popup_tooltip.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/checkbox.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+
+    {% include 'main/header.html' %}
+
+    <main>
+        <div class="disciplins_for_choice">
+            <div class="disciplins_for_choice__left">
+                <div class="buttons_menu">
+                    <div class="buttons_menu__left">
+                        <p>{{ group }}</p>
+                    </div>
+                    <div class="buttons_menu__right">
+                        <a href="" id="confirmation-electives">Подтвердить</a>
+
+                        <!-- <div class="select" id="select">
+                            <div class="select__text">
+                                <p class="text_placeholder">Первый семестр</p>
+                            </div>
+                            <div class="select__separator"></div>
+                            <span>></span>
+        
+                            <div class="select__hidden_menu none">                       
+                                <a href="">Первый семестр</a>
+                                <a href="">Второй семестр</a>
+                                <a href="">Третий семестр</a>
+                                <a href="">Четвертый семестр</a>
+                                <a href="">Пятый семестр</a>
+                                <a href="">Шестой семестр</a>
+                                <a href="">Седьмой семестр</a>
+                                <a href="">Восьмой семестр</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+    
+                <table>
+                    <tr>
+                        <th>№ <br> п/п</th>
+                        <th>Наименование дисциплины</th>
+                        <th>Выбор</th>
+                    </tr>
+        
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>
+                            <div class="block_selection_name">
+                                <div class="name">Name</div>
+                                <div class="name">Name</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="block_selection">
+                                <div class="checkbox" id="checkbox"></div>
+                                <div class="checkbox" id="checkbox"></div>
+                            </div>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <div class="block_selection_name">
+                                <div class="name">Name</div>
+                                <div class="name">Name</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="block_selection">
+                                <div class="checkbox" id="checkbox"></div>
+                                <div class="checkbox" id="checkbox"></div>
+                            </div>
+                        </td>
+                    </tr> -->
+                </table>
+            </div>
+
+            <!-- <div class="disciplins_for_choice__right">
+                <div class="patterns">
+
+                </div>
+            </div> -->
+        </div>
+    </main>
+
+    {% include 'main/footer.html' %}
+
+    <script src="{% static 'main/js/header.js' %}"></script>
+    <script src="{% static 'main/js/popup_tooltip.js' %}"></script>
+    <script src="{% static 'disciplins/js/checkbox_choice.js' %}"></script>
+    <script src="{% static 'disciplins/js/receiving_electives.js' %}"></script>
+</body>
+</html>   

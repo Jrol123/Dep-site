@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="StarkUnfassbar">
+    <meta name="description" content="Сайт для депортамента. Итоговая таблица">
+
+    <title>Итоговая таблица</title>
+    
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+
+    {% if secretary %}
+        <link rel="stylesheet" href="{% static 'vkr/css/vkr_protection_2.css' %}">  
+    {% elif member %}
+        <link rel="stylesheet" href="{% static 'vkr/css/vkr_protection_1.css' %}">
+        <link rel="stylesheet" href="{% static 'main/css/checkbox.css' %}">
+    {% elif student %}
+        <link rel="stylesheet" href="{% static 'vkr/css/vkr_protection_3.css' %}">
+    {% else %}
+
+    {% endif %}
+</head>
+<body>
+    {% if secretary %}
+        {% include 'vkr/vkr_protection_2.html' %}
+    {% elif member %}
+        {% include 'vkr/vkr_protection_1.html' %}
+    {% elif student %}
+        {% include 'vkr/vkr_protection_3.html' %}
+    {% else %}
+        <p>Доступ ограничен</p>
+    {% endif %}
+</body>
+</html>

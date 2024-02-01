@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+}
+
+
+
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+}
+
+header a{
+    width: 470px;
+}
+
+header a img{
+    width: 100%;
+    object-fit: 100%;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 440px;
+    background: #FFF;
+    border-radius: 25px;
+    border: 1px solid #000;
+    margin: 140px auto 100px;
+}
+
+
+form .form_title{
+    color: #000;
+    font-family: "DelaGothicOne", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800px;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+
+form .form_groups .form_group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+    padding: 0 35px;
+}
+
+form .form_groups .form_group:last-child{
+    margin-bottom: 0;
+}
+
+
+form .form_label{
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+}
+
+
+form .form_input{
+    width: 362px;
+    height: 53px;
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 18px;
+    padding: 0 15px;
+    border: 1px solid #CECECE;
+    border-radius: 5px;
+    background: #EAEAEA;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+form .form_input:focus{
+    outline: none;
+}
+
+
+form .button{
+    width: 362px;
+    height: 62px;
+    color: #FFF;
+    font-family: "DelaGothicOne", sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800px;
+    line-height: normal;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    background: #000;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 60px 0;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+form .button:hover{
+    color: #2B75B9;
+    background: #ABDCFF;
+}
+
+form .button:active{
+    transform: translate(0px, 2px);
+    box-shadow: none;
+}
+
+
+form .link{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+form .link a{
+    width: fit-content;
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px dashed black;
+}
+
+form .link a:hover{
+    border-bottom: 1px dashed rgba(0, 0, 0, 0);
+}
+
+
+
+.patterns img{
+    position: absolute;
+    z-index: -1;
+}
+.patterns svg{
+    position: absolute;
+    z-index: -1;
+}    
+
+.patterns img:nth-child(1){
+    top: 580px;
+    left: 90px;
+}
+.patterns img:nth-child(2){
+    top: 270px;
+    right: 160px;
+}
+.patterns svg{
+    top: 250px;
+    width: 100%;
+}

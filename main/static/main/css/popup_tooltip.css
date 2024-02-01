@@ -1,0 +1,39 @@
+.popup_tooltip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+    max-width: 300px;
+    position: fixed;
+    top: 100px;
+    right: 15px;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: #efefefef; 
+    overflow: hidden;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: all 1.5s ease;
+    opacity: 0;
+    transform: translate(200%, 0%);
+}
+
+.popup_tooltip._active{
+    opacity: 1;
+    transform: translate(0%, 0%);
+}
+
+.popup_tooltip .tooltip_icon svg{
+    width: 20px;
+    height: 20px;
+}
+
+.popup_tooltip p{
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400; 
+}

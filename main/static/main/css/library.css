@@ -1,0 +1,312 @@
+main{
+    width: calc(100% - 140px);
+    height: 1255px;
+    margin: 0 auto 100px;
+    background: url("../img/library/library_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+}
+
+main .digital_library{
+    width: 100%;
+    height: 100%;
+    padding: 30px 25px;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.90);
+    backdrop-filter: blur(5px); 
+}
+
+
+
+
+main .digital_library .digital_library__header{
+    display: flex;
+    width: 100%;
+}
+
+
+
+main .digital_library .digital_library__header__left{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+main .digital_library .digital_library__header__left .title{
+    position: relative;
+    margin-right: 20px;
+}
+
+main .digital_library .digital_library__header__left .title h1{
+    color: #FFF;
+    text-align: center;
+    font-family: "DelaGothicOne", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+main .digital_library .digital_library__header__left .title svg{
+    width: 55%;
+    position: absolute;
+    bottom: -10px;
+}
+
+
+main .digital_library .digital_library__header__left .button_load{
+    position: relative;
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    text-decoration: none;
+}
+
+main .digital_library .digital_library__header__left .button_load span{
+    position: absolute;
+    right: -40px;
+}
+
+
+
+main .digital_library .digital_library__header__right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+}
+
+
+main .digital_library .digital_library__header__right input{
+    width: 440px;
+    height: 40px;
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 9px;
+    background: #FFF;
+    border: none;
+    padding: 0 24px;
+    margin-right: 24px;
+}
+
+main .digital_library .digital_library__header__right input:focus{
+    outline: none;
+}
+
+main .digital_library .digital_library__header__right input::placeholder{
+    color: #666;
+    font-family: "OpenSans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+main .digital_library .digital_library__header__right .select{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 172px;
+    height: 40px;
+    border-radius: 9px;
+    background: #FFF;
+    padding: 0 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+main .digital_library .digital_library__header__right .select .select__text{
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+main .digital_library .digital_library__header__right .select span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px; 
+    position: absolute;
+    right: 0;
+    color: #000;
+    text-align: center;
+    font-family: "OpenSans", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    transform: rotate(90deg); 
+}
+
+main .digital_library .digital_library__header__right .select._active span{
+    transform: rotate(-90deg); 
+}
+
+main .digital_library .digital_library__header__right .select .select__separator{
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 1px;
+    height: 100%;
+    background: #D9D9D9;
+}
+
+main .digital_library .digital_library__header__right .select .select__hidden_menu{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    border-radius: 9px;
+    background: #FFF;
+    padding: 4px 0;
+    z-index: 5;
+}
+
+main .digital_library .digital_library__header__right .select .select__hidden_menu p{
+    position: relative;
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    padding: 8px 11px;
+    cursor: pointer;
+}
+
+main .digital_library .digital_library__header__right .select .select__hidden_menu p::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #D9D9D9;
+}
+
+main .digital_library .digital_library__header__right .select .select__hidden_menu p:last-child:before{
+    display: none;
+}
+
+
+
+
+main .digital_library .digital_library__list{
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+main .digital_library .digital_library__list .digital_library__list__titles{
+    display: flex;
+    gap: 20px;
+}
+
+main .digital_library .digital_library__list .digital_library__list__titles .title{
+    min-width: 265px;
+    color: #FFF;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18.5px;
+}
+
+
+main .digital_library .digital_library__list .digital_library__list__books{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 35px;
+}
+
+main .digital_library .digital_library__list .digital_library__list__books .book{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: all .3s ease;
+}
+
+main .digital_library .digital_library__list .digital_library__list__books .book::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    z-index: -1;
+    width: calc(100% + 30px);
+    height: 100%;
+    background-color: #ffffff00;
+    transition: all .3s ease;
+}
+
+main .digital_library .digital_library__list .digital_library__list__books .book:hover::before{
+    background-color: #FFF;
+}
+
+main .digital_library .digital_library__list .digital_library__list__books .book .book__info{
+    min-width: 265px;
+    color: #FFF;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.48px;
+    transition: all .3s ease;
+}
+
+main .digital_library .digital_library__list .digital_library__list__books .book:hover .book__info{
+    color: #000;
+}
+
+
+
+main .digital_library .pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+
+
+main .digital_library .pagination .pagination_list{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+main .digital_library .pagination .pagination_list a{
+    color: #FFF;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+
+main .digital_library .pagination .pagination_button_prev a{
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+}

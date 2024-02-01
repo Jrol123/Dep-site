@@ -1,0 +1,106 @@
+main{
+    display: flex;
+    width: calc(100% - 140px);
+    height: 670px; 
+    position: relative;
+    margin: 0 auto 100px;
+    border-radius: 25px;
+    border: 1px solid #000; 
+}
+
+
+main .protection_date_cells{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main .protection_date_cells table tr td{
+    width: 140px;
+    height: 67px;
+    color: #000;
+    text-align: justify;
+    font-family: "DelaGothicOne", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400; 
+    text-align: center;
+    background: #ABDCFF;
+    cursor: pointer;
+}
+
+
+
+main .separator{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+}
+
+
+
+main .protection_time_cells{
+    width: 100%;
+}
+
+
+main .protection_time_cells .cells{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 58px 49px;
+    overflow-y: auto;
+}
+
+main .protection_time_cells .cells .cell{
+    width: 100%;
+    height: fit-content;
+    padding: 10px 21px;
+    background: #ABDCFF;
+    cursor: pointer;
+}
+
+main .protection_time_cells .cells .cell .cell_data{
+    display: flex;
+    gap: 20px;
+}
+
+main .protection_time_cells .cells .cell .cell_data h5{
+    color: #2B75B9;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400; 
+}
+
+main .protection_time_cells .cells .cell .cell_data p{
+    color: #000; 
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400; 
+}
+
+
+main .protection_time_cells .cells_none{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+main .protection_time_cells .cells_none h1{
+    color: #000;
+    text-align: justify;
+    font-family: "MyriadaPro", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400; 
+    margin: 240px auto;
+}

@@ -1,0 +1,117 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="StarkUnfassbar">
+    <meta name="description" content="Сайт для депортамента. ВКР архив">
+
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    
+    <title>Дисциплины, экзамены и зачеты</title>
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'disciplins/css/grades.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/popup_tooltip.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+
+    {% include 'main/header.html' %}
+
+    <main>
+        <div class="buttons_menu">
+            <div class="buttons_menu__left">
+                <p>{{ group }}</p>
+            </div>
+            <div class="buttons_menu__right">
+                <div class="select" id="select">
+                    <div class="select__text">
+                        <p class="text_placeholder">Первый семестр</p>
+                    </div>
+                    <div class="select__separator"></div>
+                    <span>></span>
+
+                    <div class="select__hidden_menu none">                       
+                        <a href="" data-term="1">Первый семестр</a>
+                        <a href="" data-term="2">Второй семестр</a>
+                        <a href="" data-term="3">Третий семестр</a>
+                        <a href="" data-term="4">Четвертый семестр</a>
+                        <a href="" data-term="5">Пятый семестр</a>
+                        <a href="" data-term="6">Шестой семестр</a>
+                        <a href="" data-term="7">Седьмой семестр</a>
+                        <a href="" data-term="8">Восьмой семестр</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <tr>
+                <th>
+                    № <br> п/п
+                    <div class="separator"></div>
+                </th>
+                <th>
+                    Наименование дисциплины
+                    <div class="separator"></div>
+                </th>
+                <th>
+                    Тип
+                    <div class="separator"></div>
+                </th>
+                <th>
+                    Оценка
+                    <div class="separator"></div>
+                </th>
+                <th>
+                    Дата сдачи
+                    <div class="separator"></div>
+                </th>
+                <th>
+                    Ф.И.О. преподавателя
+                </th>
+            </tr>
+
+            <!-- {% for grade in grades_all %}
+                <tr>
+                    <td>1</td>
+                    <td>{{ grade.subject.name }}</td>
+                    <td>{{ grade.subject.type }}</td>
+                    <td>{{ grade.grade }}</td>
+                    <td>{{ grade.data }}</td>
+                    <td>{{ grade.fio_teacher }}</td>
+                </tr>
+            {% endfor %} -->
+    
+            <!-- <tr>
+                <td>1</td>
+                <td>Иностранный язык</td>
+                <td>Name</td>
+                <td>5</td>
+                <td>02.01.2024</td>
+                <td>Иванов Александр Иванович</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>Математика</td>
+                <td>Name</td>
+                <td>4</td>
+                <td>03.01.2024</td>
+                <td>Иванов Сергей Иванович</td>
+            </tr> -->
+        </table>
+    </main>
+
+    {% include 'main/footer.html' %}
+
+    <script src="{% static 'main/js/header.js' %}"></script>
+    <script src="{% static 'main/js/popup_tooltip.js' %}"></script>
+    <script src="{% static 'disciplins/js/grades.js' %}"></script>
+</body>
+</html>   

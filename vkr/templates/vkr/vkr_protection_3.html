@@ -1,0 +1,48 @@
+{% load static %}
+
+<body>
+    {% include 'main/header.html' %}
+
+    <main>
+        <table>
+            <tr>
+                <th>№ <br> п/п</th>
+                <th>ФИО</th>
+                <th>Тема ВКР</th>
+                <th>Рекомендации</th>
+                <th>Итог. 
+                    оценка
+                </th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Анализ эффективности использования инновационных технологий в управлении производством</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr >
+                <td>2</td>
+                <td>Иванов Александр Иванович</td>
+                <td>Разработка и анализ алгоритмов машинного обучения для решения конкретной задачи в области информационных технологий</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr >
+                <td>3</td>
+                <td>Иванов Сергей Иванович</td>
+                <td>Разработка и апробация программы корпоративного обучения и развития персонала</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </table>
+
+        <div class="patterns">
+            <img src="{% static 'vkr/img/patterns/pattern_1.png' %}" alt="">
+        </div>
+    </main>
+
+    {% include 'main/footer.html' %}
+
+    <script src="{% static 'main/js/header.js' %}"></script>
+</body>

@@ -1,0 +1,53 @@
+let select = document.querySelector("#select");
+let selectText = select.querySelector(".select__text");
+let selectHiddenMenu;
+let selectHiddenMenuButtons;
+let groups = ``;
+let updateTrue = true;
+
+select.addEventListener("click", (e) => {
+    selectHiddenMenu = select.querySelector(".select__hidden_menu");
+    selectHiddenMenuButtons = selectHiddenMenu.querySelectorAll("a");
+
+    if(select.classList.contains("_active")){
+        select.classList.remove("_active");
+        selectHiddenMenu.classList.add("none");
+    } else if(!selectHiddenMenu.contains(e.target)){
+        select.classList.add("_active");
+        selectHiddenMenu.classList.remove("none");
+        selectClose();
+
+        if(updateTrue){
+            selectUpdate();
+            updateTrue = false;
+        }
+    }
+});
+
+function selectUpdate(){
+    selectHiddenMenuButtons.forEach(selectHiddenMenuButton => {
+        selectHiddenMenuButton.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            if(groups === ``){
+                groups += `<i class="group">${selectHiddenMenuButton.innerText}</i>`;
+            } else{
+                groups += `<i>, </i> <i class="group">${selectHiddenMenuButton.innerText}</i>`;
+            }
+            selectText.innerHTML = groups;
+
+            selectText.classList.add("_active");
+            select.classList.remove("_active");
+            selectHiddenMenu.classList.add("none");
+        });
+    });
+}
+
+function selectClose(){
+    document.addEventListener("click", (e) => {
+        if(!select.contains(e.target)){
+            select.classList.remove("_active");
+            selectHiddenMenu.classList.add("none");
+        }
+    });
+}

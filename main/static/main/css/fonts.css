@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "MyriadaPro";
+    src: url("/static/main/fonts/myriad_pro/MYRIADPRO-COND.OTF");
+}
+
+@font-face {
+    font-family: "DelaGothicOne";
+    src: url("/static/main/fonts/dela_gothic_one/DelaGothicOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "PlayfairDisplay";
+    src: url("/static/main/fonts/playfair_display/PlayfairDisplay.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/static/main/fonts/monstserrat/Montserrat-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/static/main/fonts/inter/Inter-Light.ttf");
+}

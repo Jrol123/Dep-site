@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="StarkUnfassbar">
+    <meta name="description" content="Сайт для депортамента. Библиотека">
+    
+    <meta name="csrf-token" content="{{ csrf_token }}">
+
+    <title>Организация защит</title>
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'vkr/css/vkr_protection_organization.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/popup_tooltip.css' %}">
+    <link rel="stylesheet" href="{% static 'vkr/css/popup_commission.css' %}">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+    {% include 'main/header.html' %}
+
+    <main>
+        <div class="protection_date_cells"></div>
+
+        <svg class="separator" width="2" height="669" viewBox="0 0 2 669" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 0C1.00002 518.785 1.00003 662.16 1.00003 669" stroke="black"/>
+        </svg>
+
+        <div class="protection_time_cells">
+            <div class="cells_none">
+                <h1>Выберите удобную для вас дату</h1>
+            </div>
+        </div>
+    </main>
+
+    {% include 'main/footer.html' %}
+    
+    
+    <script src="{% static 'main/js/header.js' %}"></script>
+    <script src="{% static 'main/js/popup_tooltip.js' %}"></script>
+    <script src="{% static 'vkr/js/vkr_protection_organization.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+.popup__remove_file{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7); 
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 5;
+    transition: all .3s ease;
+    opacity: 0;
+}
+
+.popup__remove_file._active{
+    opacity: 1;
+}
+
+.popup__remove_file .popup__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 30px 0;
+}
+
+.popup__remove_file .popup__content{
+    position: relative;
+    width: 700px;
+    height: fit-content;
+    border-radius: 25px;
+    background: #FFF;
+    padding: 40px 51px;
+}
+
+
+.popup__remove_file .popup__body .popup__content .popup__close{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    pointer-events: none;
+}
+
+.popup__remove_file .popup__body .popup__content .popup__close svg{
+    pointer-events: painted;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+
+.popup__remove_file .popup__body .popup__content .add_file__header{
+    display: flex;
+    justify-content: left;
+    margin-bottom: 40px;
+}
+
+.popup__remove_file .popup__body .popup__content .add_file__header h1{
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700; 
+}
+
+
+.popup__remove_file .popup__body .popup__content .window_remove_file{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.popup__remove_file .popup__body .popup__content .file{
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.popup__remove_file .popup__body .popup__content .file::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #000;
+}
+
+.popup__remove_file .popup__body .popup__content .file a{
+    width: 100%;
+    color: #000;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400; 
+    text-decoration: none;
+}
+
+.popup__remove_file .popup__body .popup__content .file span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    opacity: 0;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.popup__remove_file .popup__body .popup__content .file span::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transform: rotate(45deg);
+}
+
+.popup__remove_file .popup__body .popup__content .file span::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transform: rotate(-45deg);
+}
+
+.popup__remove_file .popup__body .popup__content .file:hover span{
+    opacity: 1;
+}

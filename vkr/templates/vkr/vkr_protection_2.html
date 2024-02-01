@@ -1,0 +1,83 @@
+{% load static %}
+
+<body>
+    {% include 'main/header.html' %}
+
+    <main>
+        <table>
+            <tr>
+                <th>№ <br> п/п</th>
+                <th>ФИО</th>
+                <th>Средний 
+                    балл</th>
+                <th>Оценка руков.</th>
+                <th>Итог. оценка</th>
+                <th colspan="2">Примечание(акт о внедрении / диплом с отличием)</th>
+                <th>Тема ВКР</th>
+                <th>Руководитель-должность</th>
+                <th>Рекомендации</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <img class="pick" src="{% static 'vkr/img/icons/pick.png' %}" alt="">
+                </td>
+                <td>
+                    <img class="pick" src="{% static 'vkr/img/icons/pick.png' %}" alt="">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr >
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr >
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <ol class="list_recommendation">
+            <li>Рекомендации/выполнены:</li>
+            <li>1) в магистратуру</li>
+            <li>2) к опубликованию</li>
+            <li>3) на выставки и конкурсы</li>
+            <li>4) к внедрению</li>
+            <li>5) к внедрению в учебный процесс</li>
+            <li>6) внедренные</li>
+            <li>7) по темам, предложенным студентами</li>
+            <li>8) по заявкам предприятий</li>
+            <li>9) в области фундаментальных и поисковых научных исследований</li>
+        </ol>
+            
+        <div class="patterns">
+            <img src="{% static 'vkr/img/patterns/pattern_1.png' %}" alt="">
+        </div>
+    </main>
+
+    {% include 'main/footer.html' %}
+
+    <script src="{% static 'main/js/header.js' %}"></script>
+</body> 

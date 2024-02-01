@@ -1,0 +1,85 @@
+{% load static %}
+
+<header>
+    <div class="header_up">
+        <div class="header_up__left">
+            <a href="/" class="logo">
+                <img src="{% static 'main/img/header/logo.png' %}" alt="">
+            </a>
+        </div>
+        <div class="header_up__right">
+            <!-- <a href="" class="button_search">
+                <img src="{% static 'main/img/header/search_button.png' %}" alt="">
+            </a> -->
+
+            {% if user.is_authenticated %}
+                <a href="/users/sign_out/" class="button_sing_out">Выйти</a>
+                <a href="" class="account_userpic">
+                    <img src="{% static 'library/img/book/review_userpic.png' %}" alt="">
+                </a>
+            {% else %}
+                <a href="/users/sign_in/"  class="button_sing_up">Войти</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <nav class="header_menu">
+        <div class="header_menu__button">
+            <a href="" class="button">Организация учебного процесса</a>
+
+            <div class="links none">
+                <a href="/disciplins/grades/" class="link">Дисциплины, экзамены и зачёты</a>
+                <a href="" class="link">Журнал посещаемости</a>
+                <a href="/booking/" class="link">Бронирование аудиторий</a>
+                <a href="/disciplins/disciplins-for-choice/" class="link">Запись на факультативы и дисциплины по выбору</a>
+            </div>
+        </div>
+
+        <div class="header_menu__button">
+            <a href="" class="button">Выпускная квалификационная работа</a>
+
+            <div class="links none">
+                <a href="/vkr/teaching-materials/" class="link">Методические материалы</a>
+                <a href="/vkr/vkr-topics/" class="link">Темы ВКР</a>
+                <a href="" class="link">Места практик за пределами ДВФУ</a>
+                <a href="/vkr/vkr-protection-organization/" class="link">Организация защит</a>
+                <a href="/vkr/vkr-result-table/" class="link">Итоговая таблица по защите</a>
+                <a href="/vkr/vkr-archive/" class="link">Архив ВКР</a>
+                <a href="/vkr/creat-vkr-protection/" class="link">Создание защиты</a>
+            </div>
+        </div>
+
+        <div class="header_menu__button">
+            <a href="" class="button">Практика</a>
+
+            <div class="links none">
+                <a href="" class="link">Методические материалы</a>
+                <a href="" class="link">Практики</a>
+                <a href="" class="link">Места практик за пределами ДВФУ</a>
+                <a href="" class="link">Организация защит</a>
+                <a href="" class="link">Итоговая таблица по защите</a>
+                <a href="" class="link">Архив практик</a>
+            </div>
+        </div>
+
+        <div class="header_menu__button">
+            <a href="" class="button">Курсовая работа</a>
+
+            <div class="links none">
+                <a href="" class="link">Методические материалы</a>
+                <a href="" class="link">Темы курсовых работ</a>
+                <a href="" class="link">Организация защит</a>
+                <a href="" class="link">Итоговая таблица по защите</a>
+                <a href="" class="link">Архив курсовых работ</a>
+            </div>
+        </div>
+
+        <div class="header_menu__button">
+            <a href="/library/" class="button">Библиотека</a>
+        </div>
+
+        <div class="header_menu__button">
+            <a href="/graduates/graduates-list/" class="button">Выпускники</a>
+        </div>
+    </nav>
+</header>
