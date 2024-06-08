@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'main',
     'graduates',
     'disciplins',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
